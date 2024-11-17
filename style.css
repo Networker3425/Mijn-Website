@@ -1,0 +1,99 @@
+/* General styles for body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0E1826;  /* Donkere achtergrondkleur */
+    color: #031740;  /* Donkerblauwe tekstkleur */
+}
+
+/* Header styles */
+header {
+    background: #1B4159;  /* Blauwe achtergrond voor de header */
+    color: #ffffff;  /* Witte tekstkleur */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation links */
+nav a {
+    color: #D3D3D3 !important;  /* Lichtgrijze kleur voor navigatielinks */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+/* Project detail styles */
+.project-detail {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #1B4159;  /* Blauwe achtergrond voor projectdetails */
+    color: #ffffff;  /* Witte tekstkleur in de projectdetails */
+    border: 1px solid #031740;  /* Donkerblauwe rand */
+    border-radius: 8px;
+}
+
+/* Specifieke stijlen voor de titel van een project (project-detail h1) */
+.project-detail h1 {
+    font-size: 48pt;
+    margin: 0;
+    color: #D3D3D3 !important; /* Lichtgrijs voor de projecttitel */
+}
+
+/* Implementeer afbeelding styling */
+.project-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Link styling in projectdetail */
+.project-detail a {
+    color: #ffffff;  /* Witte kleur voor links */
+    text-decoration: underline;  /* Onderstreepte links */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #1B4159;  /* Blauwe achtergrond voor de footer */
+    color: #ffffff;  /* Witte tekstkleur in de footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for mobile devices */
+@media (max-width: 768px) {
+    /* Stack navigation links vertically on small screens */
+    nav ul {
+        display: none;  /* Verberg het menu standaard */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;  /* Ruimte tussen de items */
+    }
+
+    /* Show the hamburger menu icon on mobile */
+    label.hamburger {
+        display: flex;  /* Laat de hamburger menu-icoon zien */
+    }
+
+    /* When checkbox is checked, show the menu */
+    input[type="checkbox"]:checked + label.hamburger + ul {
+        display: flex;  /* Toon het menu als het checkbox is aangevinkt */
+    }
+}
